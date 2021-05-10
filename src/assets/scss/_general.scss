@@ -1,0 +1,59 @@
+body,
+html {
+  min-width: 320px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  font-size: 12px;
+  font-family: 'SegoeUI Regular';
+}
+.body-overflow {
+  overflow: hidden;
+}
+//Base fonts start.
+$font-segoe-red : "SegoeUI Regular";
+$font-segoe-semi: "SegoeUI SemiBold";
+$font-segoe-bold: "SegoeUI Bold";
+$font-abrilfat-reg : "Abrilfatface Regular";
+
+//Base fonts end.
+
+// Base project colors  start.
+$base-dark: #000000;
+$base-white: #ffffff;
+$base-gray: #A1A1A1;
+$base-green: #35817F;
+$base-red:#E71527;
+// Base project colors  end.
+
+// Media screen size start.
+$sz-1399: 1399px;
+$sz-1199: 1199px;
+$sz-991: 991px;
+$sz-768: 768px;
+$sz-575: 575px;
+$sz-420: 420px;
+// Media screen size end.
+
+a {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+
+
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 1030px;
+  }
+}

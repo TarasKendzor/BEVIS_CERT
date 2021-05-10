@@ -1,0 +1,8 @@
+/node_modules
+.idea
+package-lock.json
+/psd_all
+
+/src/assets/scss/style.css
+/src/assets/scss/style.css.map
+/src/assets/scss/organisms/_main-style.scss

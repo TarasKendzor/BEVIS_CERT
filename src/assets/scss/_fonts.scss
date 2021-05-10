@@ -1,0 +1,25 @@
+
+/* SegoeUI Regular */
+@font-face {
+  font-family: 'SegoeUI Regular';
+  font-display: swap;
+  src: url('../fonts/SegoeUI.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/SegoeUI.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/SegoeUI.ttf')  format('truetype'), /* Safari, Android, iOS */
+      }
+
+/* SegoeUI SemiBold*/
+@font-face {
+  font-family: 'SegoeUI SemiBold';
+  font-display: swap;
+  src: url('../fonts/SegoeUI-SemiBold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/SegoeUI-SemiBold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/SegoeUI-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+      }
+
+ /* SegoeUI Bold*/
+@font-face {
+  font-family: 'SegoeUI Bold';
+  font-display: swap;
+  src: url('../fonts/Segoe\ UI\ Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+      }

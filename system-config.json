@@ -1,0 +1,65 @@
+{
+  "paths": {
+    "src": {
+      "fonts": "src/assets/fonts/",
+      "vendorStyles": "src/assets/scss/vendors/",
+      "scss": "src/assets/scss/",
+      "vendorScripts": "src/assets/js/vendors/",
+      "js": "src/assets/js/",
+      "img": "src/assets/img/",
+      "templates": {
+        "molecules": "src/assets/templates/molecules/",
+        "organisms": "src/assets/templates/organisms/",
+        "pages": "src/assets/templates/pages/"
+      }
+    },
+    "build": {
+      "templates": {
+        "molecules": "build/partials/molecules/",
+        "organisms": "build/partials/organisms/",
+        "pages": "build/"
+      },
+      "css": {
+        "vendors": "build/assets/css/vendors/",
+        "mainstyle": "build/assets/css/"
+      },
+      "js": {
+        "vendors": "build/assets/js/vendors/",
+        "mainScript": "build/assets/js/"
+      },
+      "img": "build/assets/img/",
+      "fonts": "build/assets/fonts/"
+    },
+    "phpTemplates": {
+      "molecules": "../php_templates/molecules/",
+      "organisms": "../php_templates/organisms/",
+      "pages": "../php_templates/pages/"
+    },
+    "clear": {
+      "partials": ["build/partials/*", "build/*.html"],
+      "styles": ["build/assets/css/*"],
+      "scripts": ["build/assets/js/*"],
+      "images": ["build/assets/img/*"],
+      "fonts": ["build/assets/fonts/*"],
+      "build": ["build/*"],
+      "phpFiles": ["../php_templates/**/*.*", "../*.php"]
+    },
+    "watch": {
+      "scss": ["src/assets/templates/**/*.scss", "src/assets/scss/**/*.scss", "src/assets/scss/**/*.css"],
+      "js": "src/assets/js/**/*.js",
+      "img": "src/assets/img/**/*.*",
+      "fonts": "src/assets/fonts/**/*.*",
+      "mustache": "src/assets/templates/**/*.mustache",
+      "data": "src/assets/templates/**/*.json"
+    }
+  },
+  "serverConf": {
+    "server": {
+      "baseDir": "./build",
+      "serveStaticOptions": {
+          "extensions": ["html"]
+      }        
+    },
+    "notify": true
+  }
+}
