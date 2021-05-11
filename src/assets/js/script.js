@@ -18,6 +18,13 @@ $(document).ready(function () {
     $(".header-section__content__nav").toggleClass("show");
     $("body").toggleClass("body-overflow");
     $(this).toggleClass("active");
+    $(".body-owerlay").fadeToggle();
+  });
+  $(".body-owerlay").on("click", function () {
+    $(".header-section__content__nav").removeClass("show");
+    $("#hamburger").removeClass("active");
+    $(this).fadeOut();
+    $("body").removeClass("body-overflow");
   });
 
   $(".header-section__content__logo").click(function (e) {
@@ -32,14 +39,27 @@ $(document).ready(function () {
   // To add new section block you should make class name same that nav-anchor id.//
   $(".page-ancor").click(function (e) {
     e.preventDefault();
+
+    $(".page-ancor").each(function (index, el) {
+      el.parentNode.classList.remove("active");
+    });
+    $(this).parent().addClass("active");
+    var scrollPadding = null;
+    if ($(window).width() < 911) {
+      scrollPadding = 80;
+    } else {
+      scrollPadding = 115;
+    }
+
     var menuScroll = e.target.id;
     var thisBlock = "." + menuScroll;
     $(".header-section__content__nav").removeClass("show");
     $("body").removeClass("body-overflow");
     $("#hamburger").removeClass("active");
+    $(".body-owerlay").fadeOut();
     $("html, body").animate(
       {
-        scrollTop: $(thisBlock).offset().top - 75,
+        scrollTop: $(thisBlock).offset().top - scrollPadding,
       },
       700
     );
@@ -48,7 +68,7 @@ $(document).ready(function () {
   $(".data-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 2500,
     arrows: true,
     dots: true,
     margin: 0,
@@ -61,23 +81,11 @@ $(document).ready(function () {
       '<div class="slick-left"><img src="assets/img/arrow-right.svg" alt="Slider Arrow" /></div>',
     responsive: [
       {
-        breakpoint: 1150,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
         breakpoint: 991,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           arrows: false,
-        },
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 2,
-          arrows: false,
+          autoplay: true,
         },
       },
     ],
